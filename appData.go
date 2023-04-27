@@ -7,6 +7,10 @@ import(
 
 )
 
+
+type Bytes32 [32]byte
+type Bytes64 [64]byte
+
 var (
     	
 	//Enable / Disable Logging
