@@ -22,7 +22,7 @@ var (
 	Dial_I2p		Transfer.TransferClient
 	TorProxy		string
 	I2pProxy		string
-	aRing			:= Ring.Rings{
+	aRing			= Ring.Rings{
       AllRings:      make(map[uint64]Ring),
       RingMasters:   make(map[uint64]Node.VidarNode),
       Update:        time.Now(),
