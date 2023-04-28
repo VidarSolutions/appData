@@ -22,9 +22,15 @@ var (
 	Dial_I2p		Transfer.TransferClient
 	TorProxy		string
 	I2pProxy		string
-	
+	aRing			:= Ring.Rings{
+      AllRings:      make(map[uint64]Ring),
+      RingMasters:   make(map[uint64]Node.VidarNode),
+      Update:        time.Now(),
+      NodeIDs:       0,
+      LastRing:      0,
+   }
 	// Get the Bootstrap Rings map
-	appRings = 	Ring.Rings.LoadRings()
+	appRings = 	aRing.LoadRings()
 	
 	//Set up the working directories for the App
 	Wd			string
