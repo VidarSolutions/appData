@@ -1,9 +1,10 @@
 package appData
 
 import(
-	"github.com/vidarsolutions/edKeys"
+	"sync"
+	"github.com/vidarsolutions/Ring"
 	"github.com/vidarsolutions/Transfer"
-	"github.com/vidarsolutions/Transaction"
+
 
 )
 
@@ -17,8 +18,8 @@ var (
 	Logging 	  	bool
 	
 	//Setup Tor and I2p network dialers to communicate with other nodes
-	Dial_Tor		Transfer
-	Dial_I2p		Transfer
+	Dial_Tor		TransferClient
+	Dial_I2p		TransferClient
 	TorProxy		string
 	I2pProxy		string
 	
