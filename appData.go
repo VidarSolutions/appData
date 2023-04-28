@@ -24,7 +24,7 @@ var (
 	I2pProxy		string
 	
 	// Get the Bootstrap Rings map
-	appRings = 	Ring.Rings.loadRings()
+	appRings = 	Ring.Rings.LoadRings()
 	
 	//Set up the working directories for the App
 	Wd			string
