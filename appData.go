@@ -2,6 +2,8 @@ package appData
 
 import(
 	"sync"
+	"time"
+	"github.com/vidarsolutions/Node"
 	"github.com/vidarsolutions/Ring"
 	"github.com/vidarsolutions/Transfer"
 
@@ -22,8 +24,8 @@ var (
 	Dial_I2p		Transfer.TransferClient
 	TorProxy		string
 	I2pProxy		string
-	aRing			= Ring.Rings{
-      AllRings:      make(map[uint64]Ring),
+	aRing			= Ring.rings{
+      AllRings:      make(map[uint64]Ring.Ring),
       RingMasters:   make(map[uint64]Node.VidarNode),
       Update:        time.Now(),
       NodeIDs:       0,
